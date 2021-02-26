@@ -1,0 +1,25 @@
+.content{
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+.mdl-card{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.header {
+    background: url(../img/border.png) repeat-x 0px 0px #FFF;
+    color: black;
+}
+.menu{
+  color: grey;
+}
+footer{
+  bottom:0;
+  border-top: solid;
+  text-align: center;
+  padding:10px;
+  margin-top: 10px;
+}
