@@ -11,4 +11,13 @@ function get_editeur_info($cle_editeur)
   }
   return $key;
 }
+function get_app_from_editeur($cle_editeur)
+{
+  $verification =  "SELECT cle, nom FROM app_application WHERE cle_editeur='$cle_editeur'";
+  //récupération de la connexion à la Base de donnée
+  require 'WAC_DB.php';
+  //on récupère les données de la base
+  $crawler = $db->query($verification);
+  return $crawler;
+}
 ?>
