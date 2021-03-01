@@ -4,7 +4,7 @@
   <!-- Colored FAB button -->
   <p><button class="mdl-button mdl-js-button mdl-button--fab mdl-color--orange-100 dialog-button" >
     <i class="material-icons">add</i>
-  </button> Nouvelle Application</p>
+  </button> Nouvel éditeur</p>
   <!-- AFFICHAGE DES APPLICATIONS -->
   <?php require 'frameworks/WAC_GetAllEditeurs.php'; ?>
   <?php foreach ($crawler_editeurs as $key): ?>

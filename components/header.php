@@ -14,6 +14,11 @@
       <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">Apperture</span>
         <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield  mdl-textfield--align-right">
+          <?php if (isset($_SESSION['identifiant'])): ?>
+            <?php echo $_SESSION['identifiant']; ?>
+          <?php endif; ?>
+        </div>
       </div>
     </header>
     <div class="mdl-layout__drawer">

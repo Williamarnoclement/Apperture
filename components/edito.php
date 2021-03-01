@@ -15,7 +15,7 @@ $crawler = get_editeur_info($cle_editeur);
   <?php if ($variable != null): ?>
     <?php echo "<p>Vous trouverez ci-dessous la liste des Applications métiers éditées par ".$crawler['nom'].":</p>"; ?>
     <?php foreach ($variable as $key): ?>
-      <p><a href="<?php echo $key['cle']; ?>"><?php echo $key['nom']; ?></a></p>
+      <p><a href="<?php echo "viewApp.php?app=".$key['cle']; ?>"><?php echo $key['nom']; ?></a></p>
     <?php endforeach; ?>
   <?php endif; ?>
 </div>
