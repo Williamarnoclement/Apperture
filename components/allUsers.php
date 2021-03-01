@@ -47,5 +47,4 @@
 function check(ch){
   window.location.href = "<?php echo "switch.php" ;?>?switch="+ch.id;
 }
-
 </script>
