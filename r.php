@@ -9,6 +9,8 @@ include "components/resultats.php";
 // options 3 -> éditeur             //
 /**--------------------------------**/
 include "components/header.php";
+require 'components/home.php';
+
 ?>
 
 <div class="content center">
