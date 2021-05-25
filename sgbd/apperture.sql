@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 26 fév. 2021 à 16:43
+-- Généré le : mar. 25 mai 2021 à 15:18
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.2
 
@@ -37,6 +37,19 @@ CREATE TABLE `app_application` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `app_direction`
+--
+
+CREATE TABLE `app_direction` (
+  `cle` int(11) NOT NULL,
+  `nom` varchar(300) NOT NULL,
+  `numero_dir` int(11) NOT NULL,
+  `id_directeur` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `app_editeur`
 --
 
@@ -53,6 +66,19 @@ CREATE TABLE `app_editeur` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `app_licence`
+--
+
+CREATE TABLE `app_licence` (
+  `cle` int(11) NOT NULL,
+  `cle_direction` int(11) NOT NULL,
+  `cle_logiciel` int(11) NOT NULL,
+  `debut_licence` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `app_utilisateur`
 --
 
@@ -61,6 +87,7 @@ CREATE TABLE `app_utilisateur` (
   `nom` varchar(60) NOT NULL,
   `prenom` varchar(60) NOT NULL,
   `identifiant` varchar(30) NOT NULL,
+  `cle_direction` int(11) NOT NULL DEFAULT 0,
   `hash` varchar(100) NOT NULL,
   `salt` varchar(130) NOT NULL,
   `isAdmin` tinyint(1) NOT NULL DEFAULT 0,
@@ -80,9 +107,21 @@ ALTER TABLE `app_application`
   ADD PRIMARY KEY (`cle`);
 
 --
+-- Index pour la table `app_direction`
+--
+ALTER TABLE `app_direction`
+  ADD PRIMARY KEY (`cle`);
+
+--
 -- Index pour la table `app_editeur`
 --
 ALTER TABLE `app_editeur`
+  ADD PRIMARY KEY (`cle`);
+
+--
+-- Index pour la table `app_licence`
+--
+ALTER TABLE `app_licence`
   ADD PRIMARY KEY (`cle`);
 
 --
@@ -103,9 +142,21 @@ ALTER TABLE `app_application`
   MODIFY `cle` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `app_direction`
+--
+ALTER TABLE `app_direction`
+  MODIFY `cle` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `app_editeur`
 --
 ALTER TABLE `app_editeur`
+  MODIFY `cle` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `app_licence`
+--
+ALTER TABLE `app_licence`
   MODIFY `cle` int(11) NOT NULL AUTO_INCREMENT;
 
 --
