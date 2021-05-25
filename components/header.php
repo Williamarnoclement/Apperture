@@ -35,6 +35,7 @@
             <a class="mdl-navigation__link" href="ModoUsr.php">Moderer Utilisateurs</a>
             <a class="mdl-navigation__link" href="modoApp.php">Moderer Applications</a>
             <a class="mdl-navigation__link" href="modoEdito.php">Moderer Editeurs</a>
+            <a class="mdl-navigation__link" href="modoDir.php">Moderer Direction</a>
           <?php endif; ?>
           <a class="mdl-navigation__link" href="deconnexion.php">Se déconnecter</a>
         <?php endif; ?>
