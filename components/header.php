@@ -37,6 +37,10 @@
             <a class="mdl-navigation__link" href="modoEdito.php">Moderer Editeurs</a>
             <a class="mdl-navigation__link" href="modoDir.php">Moderer Directions</a>
             <a class="mdl-navigation__link" href="modoLic.php">Moderer Licences</a>
+            <!--<a class="mdl-navigation__link" href="modobudget.php">Moderer Budgets</a>-->
+          <?php endif; ?>
+          <?php if ($_SESSION['isAdmin'] == true || $_SESSION['isVIP'] == true): ?>
+            <a class="mdl-navigation__link" href="budgets.php">Voir les Budgets logiciels</a>
           <?php endif; ?>
           <a class="mdl-navigation__link" href="deconnexion.php">Se déconnecter</a>
         <?php endif; ?>

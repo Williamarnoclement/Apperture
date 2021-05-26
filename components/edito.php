@@ -7,7 +7,7 @@ $cle_editeur = $_GET['editeur'];
 require "frameworks/WAC_GetEditeurViewer.php";
 $crawler = get_editeur_info($cle_editeur);
 ?>
-<div class="content center">
+<div class="content center" style="text-align:left;">
   <h2><?php echo $crawler['nom']; ?></h2>
   <?php if ($_SESSION &&($_SESSION['isAdmin'] == true || $_SESSION['isTech'] == true)): ?>
     <p>Le site <b>support</b> de <b>l'éditeur</b> est le suivant: <a href="<?php echo $crawler['site_internet']; ?>"><?php echo $crawler['site_internet']; ?></a> .</p>
