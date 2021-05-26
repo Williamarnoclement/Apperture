@@ -14,8 +14,11 @@
       </div>
       <div class="mdl-card__supporting-text">
         <p><?php echo $key['description']; ?></p>
-        <p>Emplacement du logiciel: <a href="<?php echo $key['emplacement']; ?>"><?php echo $key['emplacement']; ?></a></p>
-        <p>Emplacement de la procédure: <a href="<?php echo $key['procedure_']; ?>"><?php echo $key['procedure_']; ?></a></p>
+        <?php if ($_SESSION &&($_SESSION['isAdmin'] == true || $_SESSION['isTech'] == true)): ?>
+          <p>Emplacement du logiciel: <a href="<?php echo $key['emplacement']; ?>"><?php echo $key['emplacement']; ?></a></p>
+          <p>Emplacement de la procédure: <a href="<?php echo $key['procedure_']; ?>"><?php echo $key['procedure_']; ?></a></p>
+        <?php endif; ?>
+
       </div>
     </div>
   <?php endforeach; ?>

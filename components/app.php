@@ -10,8 +10,10 @@ $crawler = get_app_info($cle_app);
 <div class="content center">
   <h2><?php echo $crawler['nom']; ?></h2>
   <p><?php echo $crawler['description']; ?></p>
-  <p>Emplacement du logiciel: <a href="<?php echo $crawler['emplacement']; ?>"><?php echo $crawler['emplacement']; ?></a></p>
-  <p>Emplacement de la procédure: <a href="<?php echo $crawler['procedure_']; ?>"><?php echo $crawler['procedure_']; ?></a></p>
+  <?php if ($_SESSION &&($_SESSION['isAdmin'] == true || $_SESSION['isTech'] == true)): ?>
+    <p>Emplacement du logiciel: <a href="<?php echo $crawler['emplacement']; ?>"><?php echo $crawler['emplacement']; ?></a></p>
+    <p>Emplacement de la procédure: <a href="<?php echo $crawler['procedure_']; ?>"><?php echo $crawler['procedure_']; ?></a></p>
+  <?php endif; ?>
   <?php $crawl_editeur = get_editeur_name($crawler['cle_editeur']); ?>
   <p>Le logiciel est édité par <b>l'éditeur</b> suivant: <a href="<?php echo 'editeur.php?editeur='.$crawl_editeur['cle']; ?>"><?php echo $crawl_editeur['nom']; ?></a></p>
   <p>Le logiciel est utilisé dans les <b>directions</b> suivantes:</p>
