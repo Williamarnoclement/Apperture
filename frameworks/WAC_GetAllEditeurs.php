@@ -1,5 +1,5 @@
 <?php
-$verification_editeur =  "SELECT cle, nom, site_internet, mail FROM app_editeur ORDER BY nom";
+$verification_editeur =  "SELECT cle, nom, site_internet, mail, telephone, interlocuteur, numero_contrat FROM app_editeur ORDER BY nom";
 //récupération de la connexion à la Base de donnée
 require 'WAC_DB.php';
 //on récupère les données de la base

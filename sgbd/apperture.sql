@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 25 mai 2021 à 15:18
+-- Généré le : mer. 26 mai 2021 à 11:08
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.2
 
@@ -31,6 +31,8 @@ CREATE TABLE `app_application` (
   `cle` int(11) NOT NULL,
   `nom` varchar(60) NOT NULL,
   `description` text NOT NULL,
+  `emplacement` varchar(500) NOT NULL,
+  `procedure_` varchar(500) NOT NULL,
   `cle_editeur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -58,9 +60,9 @@ CREATE TABLE `app_editeur` (
   `nom` varchar(60) NOT NULL,
   `mail` varchar(200) NOT NULL,
   `site_internet` varchar(200) NOT NULL,
-  `id_connexion` varchar(60) NOT NULL,
-  `mdp_connexion` varchar(240) NOT NULL,
-  `salt` varchar(200) NOT NULL
+  `telephone` varchar(60) NOT NULL,
+  `interlocuteur` varchar(240) NOT NULL,
+  `numero_contrat` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

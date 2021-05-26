@@ -1,7 +1,7 @@
 <?php
 function get_app_info($cle_logiciel)
 {
-  $verification =  "SELECT a.cle, a.nom, a.description, a.cle_editeur FROM app_application a WHERE cle='$cle_logiciel' LIMIT 1";
+  $verification =  "SELECT a.cle, a.nom, a.description, a.cle_editeur,a.emplacement, a.procedure_, a.cle_editeur FROM app_application a WHERE cle='$cle_logiciel' LIMIT 1";
   //récupération de la connexion à la Base de donnée
   require 'WAC_DB.php';
   //on récupère les données de la base

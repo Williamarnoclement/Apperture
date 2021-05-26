@@ -13,7 +13,9 @@
         <h2 class="mdl-card__title-text"><a href="<?php echo "viewApp.php?app=".$key['cle']; ?>"><?php echo $key['nom']; ?></a></h2>
       </div>
       <div class="mdl-card__supporting-text">
-        <?php echo $key['description']; ?>
+        <p><?php echo $key['description']; ?></p>
+        <p>Emplacement du logiciel: <a href="<?php echo $key['emplacement']; ?>"><?php echo $key['emplacement']; ?></a></p>
+        <p>Emplacement de la procédure: <a href="<?php echo $key['procedure_']; ?>"><?php echo $key['procedure_']; ?></a></p>
       </div>
     </div>
   <?php endforeach; ?>
@@ -29,7 +31,15 @@
     </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input class="mdl-textfield__input" type="text" name="description" required>
-      <label class="mdl-textfield__label" for="sample3">description</label>
+      <label class="mdl-textfield__label" for="sample3">Description</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" name="emplacement" required>
+      <label class="mdl-textfield__label" for="sample3">Emplacement du logiciel</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" name="procedure_" required>
+      <label class="mdl-textfield__label" for="sample3">Emplacement de la procédure</label>
     </div>
     <?php require "frameworks/WAC_GetAllEditeurs.php"; ?>
     <mat-form-field appearance="fill">
