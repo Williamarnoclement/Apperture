@@ -1,5 +1,5 @@
-<div class="content">
-  <h3><b>App</b>erture</h3>
+<div class="content" style="height:90%;">
+  <h3 style="color:black;"><b>App</b>erture</h3>
   <form action="r.php" autocomplete="off" method="get">
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%;">
       <input class="mdl-textfield__input" type="text" id="sample3" name="champs">
