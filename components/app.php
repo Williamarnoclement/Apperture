@@ -26,15 +26,17 @@ $crawler = get_app_info($cle_app);
   <?php foreach (get_dir_from_app($crawler['cle']) as $k): ?>
     <p style="color:blue;"><?php echo $k['nom']; ?></p>
   <?php endforeach; ?>
-  <?php require 'frameworks/WAC_GetBudgetFromCleLogiciel.php'; ?>
-  <?php $k = get_budget_from_cle_logiciel($crawler['cle']); ?>
-  <?php if (isset($k)): ?>
-    <h3>Fiche budget</h3>
-    <p>Le cout par an de la licence logiciel s'élève à <b><?php echo $k['coutParAn']; ?> euros.</b></p>
-  <?php endif; ?>
-  <?php if (!isset($k)): ?>
-    <h3>Fiche budget (non complétée)</h3>
-    <p>Le cout de la licence logiciel n'est pas déterminée.</p>
+  <?php if ($_SESSION &&($_SESSION['isAdmin'] == true || $_SESSION['isVIP'] == true)): ?>
+    <?php require 'frameworks/WAC_GetBudgetFromCleLogiciel.php'; ?>
+    <?php $k = get_budget_from_cle_logiciel($crawler['cle']); ?>
+    <?php if (isset($k)): ?>
+      <h3>Fiche budget</h3>
+      <p>Le cout par an de la licence logiciel s'élève à <b><?php echo $k['coutParAn']; ?> euros.</b></p>
+    <?php endif; ?>
+    <?php if (!isset($k)): ?>
+      <h3>Fiche budget (non complétée)</h3>
+      <p>Le cout de la licence logiciel n'est pas déterminée.</p>
+    <?php endif; ?>
   <?php endif; ?>
 </div>
 <dialog id="dialog" class="mdl-dialog">

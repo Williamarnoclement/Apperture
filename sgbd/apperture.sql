@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 26 mai 2021 à 11:08
+-- Généré le : jeu. 27 mai 2021 à 08:52
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.2
 
@@ -34,6 +34,18 @@ CREATE TABLE `app_application` (
   `emplacement` varchar(500) NOT NULL,
   `procedure_` varchar(500) NOT NULL,
   `cle_editeur` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `app_budget`
+--
+
+CREATE TABLE `app_budget` (
+  `cle` int(11) NOT NULL,
+  `cle_logiciel` int(11) NOT NULL,
+  `coutParAn` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -109,6 +121,12 @@ ALTER TABLE `app_application`
   ADD PRIMARY KEY (`cle`);
 
 --
+-- Index pour la table `app_budget`
+--
+ALTER TABLE `app_budget`
+  ADD PRIMARY KEY (`cle`);
+
+--
 -- Index pour la table `app_direction`
 --
 ALTER TABLE `app_direction`
@@ -141,6 +159,12 @@ ALTER TABLE `app_utilisateur`
 -- AUTO_INCREMENT pour la table `app_application`
 --
 ALTER TABLE `app_application`
+  MODIFY `cle` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `app_budget`
+--
+ALTER TABLE `app_budget`
   MODIFY `cle` int(11) NOT NULL AUTO_INCREMENT;
 
 --
