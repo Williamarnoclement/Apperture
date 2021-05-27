@@ -8,9 +8,12 @@ require "frameworks/WAC_AppViewer.php";
 $crawler = get_app_info($cle_app);
 ?>
 <div class="content center" style="text-align:left;">
-  <h2><?php echo $crawler['nom']; ?>  <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--orange-100 dialog-button" >
+  <h2><?php echo $crawler['nom']; ?>
+  <?php if ($_SESSION &&($_SESSION['isAdmin'] == true)): ?>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--orange-100 dialog-button" >
     <i class="material-icons">create</i></h2>
   </button>
+<?php endif; ?>
   <h3>Description</h3>
   <p><?php echo $crawler['description']; ?></p>
   <?php if ($_SESSION &&($_SESSION['isAdmin'] == true || $_SESSION['isTech'] == true)): ?>

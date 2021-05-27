@@ -28,6 +28,7 @@
           <a class="mdl-navigation__link" href="index.php">Accueil</a>
           <a class="mdl-navigation__link" href="inscription.php">S'inscrire</a>
           <a class="mdl-navigation__link" href="connexion.php">Se connecter</a>
+          <a class="mdl-navigation__link" href="a-propos.php">A propos</a>
         <?php endif; ?>
         <?php if (isset($_SESSION['identifiant'])): ?>
           <a class="mdl-navigation__link" href="homepage.php">Rechercher</a>
