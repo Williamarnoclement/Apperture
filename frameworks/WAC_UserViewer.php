@@ -22,7 +22,7 @@ function get_user_info($cle)
   require 'WAC_DB.php';
   //on récupère les données de la base
   $crawler = $db->query($verification);
-  //on retourne les données de l'application métier
+  //on retourne les données de l'utilisateur
   foreach ($crawler as $key){
   }
   return $key;
