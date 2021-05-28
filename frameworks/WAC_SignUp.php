@@ -1,5 +1,14 @@
 <?php
-
+/**
+ * Permet l'inscription de l'utilisateur à Apperture
+ *
+ * Après verification, ce fichier va permettre l'inscription  de l'utilisateur
+ *
+ * PHP version 8.0.2
+ *
+ * @author    William-Arno Clément <wiyam@icloud.com>
+ * @copyright 2021 Mairie de Vitry-sur-Seine
+ */
   if ($_POST['identifiant'] == null) {
     $newURL = "../inscription.php?missIdentifiant";
     header('Location: '.$newURL);

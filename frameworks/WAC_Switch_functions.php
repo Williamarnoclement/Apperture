@@ -1,4 +1,22 @@
 <?php
+/**
+ * Permet la récupération des données relatives aux switchs pour la modération des utilisateurs
+ *
+ * Fonctions usuelles permettant l'affichage et la modification des switchs (gestion des privilèges)
+ *
+ * PHP version 8.0.2
+ *
+ * @author    William-Arno Clément <wiyam@icloud.com>
+ * @copyright 2021 Mairie de Vitry-sur-Seine
+ */
+ /**
+ * Permet le changement de la valeur stockée dans l'utilisateur pour un statut (gestion des privilèges)
+ *
+ * @param  $identifiant_utilisateur clé primaire de l'utilisateur
+ * @param  $valeur_switch 1 pour isAdmin, 2 pour isTechnicien,3 pour is VIP, 4 pour isEnAttente
+ * @param  $valeur_actuelle valeur actuelle du switch
+ *
+ */
 function switch_change($identifiant_utilisateur, $valeur_switch, $valeur_actuelle)
 {
   require 'WAC_DB.php';
@@ -23,6 +41,13 @@ function switch_change($identifiant_utilisateur, $valeur_switch, $valeur_actuell
   $newURL = "ModoUsr.php";
   header('Location: '.$newURL);
 }
+/**
+* Permet la récupération de la valeur actuelle du switch
+*
+* @param  $identifiant_utilisateur clé primaire de l'utilisateur
+* @param  $valeur_switch 1 pour isAdmin, 2 pour isTechnicien,3 pour is VIP, 4 pour isEnAttente
+*
+*/
 function switch_get($identifiant_utilisateur, $valeur_switch)
 {
   require 'WAC_DB.php';

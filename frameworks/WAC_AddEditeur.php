@@ -1,4 +1,14 @@
 <?php
+/**
+ * Permet d'ajouter un Editeur dans la base de données
+ *
+ * Insertion dans la table app_editeur des données nécéssaires
+ *
+ * PHP version 8.0.2
+ *
+ * @author    William-Arno Clément <wiyam@icloud.com>
+ * @copyright 2021 Mairie de Vitry-sur-Seine
+ */
 $site = $_POST['site'];
 $nom = $_POST['nom'];
 $mail = $_POST['mail'];

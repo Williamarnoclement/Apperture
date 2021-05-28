@@ -1,4 +1,14 @@
 <?php
+/**
+ * Permet de modifier une Application métier dans la base de données
+ *
+ * Mise à jour d'une ligne dans la table app_application
+ *
+ * PHP version 8.0.2
+ *
+ * @author    William-Arno Clément <wiyam@icloud.com>
+ * @copyright 2021 Mairie de Vitry-sur-Seine
+ */
 $description = $_POST['description'];
 $nom = $_POST['nom'];
 $cle = $_POST['cle'];

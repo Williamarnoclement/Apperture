@@ -1,5 +1,14 @@
 <?php
-
+/**
+ * Permet la connexion de l'utilisateur à son interface Apperture
+ *
+ * Après verification, ce fichier va permettre la connexion de l'utilisateur à l'interface
+ *
+ * PHP version 8.0.2
+ *
+ * @author    William-Arno Clément <wiyam@icloud.com>
+ * @copyright 2021 Mairie de Vitry-sur-Seine
+ */
   if ($_POST['identifiant'] == null || $_POST['mdp'] == null) {
     $newURL = "../connexion.php?incorrectCredentials";
     header('Location: '.$newURL);
