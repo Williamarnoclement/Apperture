@@ -87,7 +87,7 @@ CREATE TABLE `app_licence` (
   `cle` int(11) NOT NULL,
   `cle_direction` int(11) NOT NULL,
   `cle_logiciel` int(11) NOT NULL,
-  `debut_licence` date NOT NULL DEFAULT current_timestamp()
+  `debut_licence` date NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
