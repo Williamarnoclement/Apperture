@@ -16,7 +16,7 @@
     $log_identifiant = $_POST['identifiant'];
     $log_mdp = $_POST['mdp'];
     //si les credentials ne sont pas vides, on tente de se connecter
-    $verification =  "SELECT identifiant, hash, salt, isAdmin, isTechnicien, isEnAttente, isVIP  FROM app_Utilisateur WHERE identifiant='$log_identifiant'";
+    $verification =  "SELECT identifiant, hash, salt, isAdmin, isTechnicien, isEnAttente, isVIP  FROM app_utilisateur WHERE identifiant='$log_identifiant'";
     //récupération de la connexion à la Base de donnée
     require 'WAC_DB.php';
     //on récupère les données de la base

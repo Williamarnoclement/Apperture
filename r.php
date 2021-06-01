@@ -9,7 +9,7 @@ include "components/resultats.php";
 // options 3 -> éditeur             //
 /**--------------------------------**/
 include "components/header.php";
-require 'components/loupe.php';
+include "components/loupe.php";
 ?>
 
 <div class="mdl-layout__content content">

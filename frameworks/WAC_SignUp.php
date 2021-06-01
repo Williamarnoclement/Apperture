@@ -43,7 +43,7 @@
       }
     }
     //a partir d'ici, l'utilisateur est créé.
-    $stmt = $db->prepare("INSERT INTO app_Utilisateur (cle,nom,prenom,identifiant,hash,salt) VALUES (null,:nom,:prenom,:identifiant,:hash,:salt)");
+    $stmt = $db->prepare("INSERT INTO app_utilisateur (cle,nom,prenom,identifiant,hash,salt) VALUES (null,:nom,:prenom,:identifiant,:hash,:salt)");
     $stmt->bindParam(':nom', $nom);
     $stmt->bindParam(':prenom', $prenom);
     $stmt->bindParam(':identifiant', $identifiant);

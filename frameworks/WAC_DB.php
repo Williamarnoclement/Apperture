@@ -9,7 +9,7 @@
  * @author    William-Arno Clément <wiyam@icloud.com>
  * @copyright 2021 Mairie de Vitry-sur-Seine
  */
-$user = "root";
+$user = "";
 $pass = "";
-$db = new PDO('mysql:host=localhost;dbname=apperture', $user, $pass);
+$db = new PDO("mysql:dbname=apperture;port=3306;host=localhost", $user, $pass);
 ?>
