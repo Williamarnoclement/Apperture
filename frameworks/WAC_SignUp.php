@@ -31,7 +31,7 @@
     //récupération de la connexion à la Base de donnée
     require 'WAC_DB.php';
     //on vérifie si l'utilisateur est déjà dans la base de donnée
-    $verification =  "SELECT identifiant FROM app_Utilisateur WHERE identifiant='$identifiant'";
+    $verification =  "SELECT identifiant FROM app_utilisateur WHERE identifiant='$identifiant'";
     $incr = 0;
     foreach  ($db->query($verification) as $row) {
       $incr++;
