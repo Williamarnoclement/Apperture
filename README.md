@@ -12,5 +12,6 @@ Pour plus de renseignements, contacter le développeur à wiyam[at]icloud[point]
 
 ## Journal de developpement
 
-L'évolution du développement est visible sur le Trello du projet:
-https://trello.com/b/wC1vtjRc
+Découvrez l'article dédié au projet sur mon site internet:
+[https://trello.com/b/wC1vtjRc
+](https://www.griffure.com/apperture-le-repertoire-dapplications-metiers/)
