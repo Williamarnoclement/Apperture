@@ -1,8 +1,6 @@
-# apperture
+# Apperture: le répertoire d'applications Métier
 
 ## Présentation
-
-Répertoire d'applications Métier
 
 Apperture est une application web développée par William-Arno CLEMENT dans le cadre de sa formation en alternance à la Mairie de Vitry-sur-Seine sous le regard de Sylvain RAPIN.
 Le logiciel est développé en PHP Vanilla.
